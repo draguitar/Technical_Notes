@@ -10,6 +10,7 @@
 <br/> 
 ---
 # 零、安裝
+## [DVC-tutorial](https://dvc.org/doc/use-cases/versioning-data-and-model-files/tutorial)
 ## **python**
 ## **git**
 ## Install Conda & pip
@@ -19,6 +20,10 @@ $ conda install -c conda-forge dvc
 ```
 $ pip install dvc
 ```
+```
+$ git clone https://github.com/iterative/example-versioning.git
+```
+* 刪除.dvc檔案，重頭開始
 ---
 ```
 $ git clone https://github.com/iterative/example-versioning.git
@@ -69,6 +74,11 @@ $ git commit .dvc/config -m "Init configure local remote"
 ---
 
 # 三、託管DATA
+* 下載圖片資料集
+```
+$ dvc get https://github.com/iterative/dataset-registry \
+tutorials/versioning/data.zip
+```
 ```
 $ dvc add data
 ```
