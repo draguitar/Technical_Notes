@@ -60,7 +60,11 @@ git commit -m "初始化 DVC"
 
 
 ```
+# local
 $ dvc remote add -d myremote "D:\storage"
+# ssh
+$ dvc remote add -d myremote ssh://<user>@10.15.11.75:22/home/infrada/DVC_remote/
+$ dvc remote modify myremote password <password>
 
 查看remote 配置
 $ dvc remote list
@@ -102,6 +106,10 @@ $ git add data.dvc model.h5.dvc metrics.csv .gitignore train.py
 $ git commit -m "First model, trained with 1000 images"
 $ git tag -a "v1.0" -m "model v1.0, 1000 images"
 ```  
+* 將tag版本推到remote
+```
+$ git push origin <tag_name>
+```
 ---
 # 四、第二版本兩千張
 ## 增加training data 
