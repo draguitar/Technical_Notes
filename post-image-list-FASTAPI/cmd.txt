@@ -1,4 +1,0 @@
-$ docker-compose up
-$ docker images
-$ docker ps
-localhost:8000/docs

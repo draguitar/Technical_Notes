@@ -1,0 +1,9 @@
+$ docker build -t prober_api .
+$ docker run -d --name ProberAPI -p 8000:80 prober_api
+$ docker exec -it ProberAPI bash
+
+# IMAGE NAME:prober_api
+# Container :ProberAPI
+
+# COPY
+$ docker cp ProberAPI:/app/my.jpg /home/infrada/fastapi/ProberAPI/

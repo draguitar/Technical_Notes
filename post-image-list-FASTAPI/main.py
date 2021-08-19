@@ -1,4 +1,4 @@
-# å•Ÿå‹•server
+# ?Ÿå?server
 # uvicorn main:app --reload --port 8888
 from typing import Optional
 
@@ -40,20 +40,5 @@ async def create_item(item: Item):
     img = Image.fromarray(data, 'L')
     img.save('my.jpg')
     img.show()
-    return "succ"
+    return {"Predict":"AngelaBaby"}
 
-from enum import Enum
-
-class Animal(str, Enum):
-    Dog = 'dog'
-    Cat = 'cat'
-    Mouse = 'mouse'
-
-@app.get('/animal/{animal_name}')
-def get_animal(animal_name:Animal):
-    if animal_name == Animal.Dog :
-        return 'dog'
-    elif animal_name == Animal.Cat :
-        return 'cat'
-    elif animal_name == Animal.Mouse :
-        return 'mouse'
